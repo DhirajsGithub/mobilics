@@ -24,8 +24,8 @@ export default function Home({ resJson }) {
           </li>
           <li className={classes.liItem}>
             <Link href="/Tables/3">
-              Users with last name starting with "M", long quotes, email
-              includes last name
+              Users with last name starting with &quot;M&quot;, long quotes,
+              email includes last name
             </Link>
           </li>
           <li className={classes.liItem}>
