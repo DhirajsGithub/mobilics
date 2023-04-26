@@ -12,8 +12,6 @@ import classes from "../../src/styles/Home.module.css";
 export default function TopTen({ resJson }) {
   const topCities = resJson.topCities;
   const cityIncomes = resJson.cityIncomes;
-  console.log(cityIncomes);
-  console.log(topCities[0]);
   const [rows, setRows] = React.useState([]);
   function createData(rank, city, income) {
     return { rank, city, income };
@@ -31,7 +29,6 @@ export default function TopTen({ resJson }) {
     }
     setRows(temp);
   }, []);
-  console.log(rows);
   return (
     <div
       style={{

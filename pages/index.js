@@ -13,24 +13,55 @@ export default function Home({ resJson }) {
       <div className={classes.links}>
         <ul className={classes.uoList}>
           <li className={classes.liItem}>
-            <Link href="/1">
-              Users with income lower than $5 and BMW/Mercedes cars
+            <Link
+              href={{
+                pathname: "/1",
+                query: {
+                  details:
+                    "Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.",
+                },
+              }}
+            >
+              Users with low income and BMW/Mercedes cars
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/2">
-              Male users with phone price greater than 10,000.
+            <Link
+              href={{
+                pathname: "/2",
+                query: {
+                  details:
+                    " Male Users which have phone price greater than 10,000.",
+                },
+              }}
+            >
+              Male users with expensive phones
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/3">
-              Users with last name starting with &quot;M&quot;, long quotes,
-              email includes last name
+            <Link
+              href={{
+                pathname: "/3",
+                query: {
+                  details:
+                    "Users whose last name starts with “M” and has a quote character length greater than 15 and email includes his/her last name.",
+                },
+              }}
+            >
+              Users with last name starting with M and long quotes in email
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/4">
-              Users with car BMW/Mercedes/Audi and no digits in email
+            <Link
+              href={{
+                pathname: "/4",
+                query: {
+                  details:
+                    "Users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit.",
+                },
+              }}
+            >
+              Users with luxury cars and no digits in email
             </Link>
           </li>
           <li className={classes.liItem}>

@@ -11,7 +11,7 @@ export default async function fetchMalePhonePrice(req, res) {
   await connectMongo();
   try {
     await Test.find({
-      $and: [{ gender: "Male" }, { "phone.price": { $gt: 10000 } }],
+      $and: [{ gender: "Male" }, { phone_price: { $gt: 10000 } }],
     }).then((data) => {
       if (data) {
         res.status(201).send(data);

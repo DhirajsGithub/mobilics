@@ -2,9 +2,7 @@
     text-decoration: underline;
 }
 .header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    text-align: center;
 }
 .links{
     height: 70vh;
