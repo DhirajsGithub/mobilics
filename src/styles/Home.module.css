@@ -1,0 +1,29 @@
+.homeBtn:hover{
+    text-decoration: underline;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    margin-top: 1rem;
+}
+.uoList{
+    text-decoration: none;
+    list-style-type:circle;
+}
+.liItem{
+    margin: 0.8rem 0;
+    font-size: larger;
+}
+.liItem:hover{
+    text-decoration: underline;
+}
