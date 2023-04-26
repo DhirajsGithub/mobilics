@@ -13,23 +13,23 @@ export default function Home({ resJson }) {
       <div className={classes.links}>
         <ul className={classes.uoList}>
           <li className={classes.liItem}>
-            <Link href="/Tables/1">
+            <Link href="/1">
               Users with income lower than $5 and BMW/Mercedes cars
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/Tables/2">
+            <Link href="/2">
               Male users with phone price greater than 10,000.
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/Tables/3">
+            <Link href="/3">
               Users with last name starting with &quot;M&quot;, long quotes,
               email includes last name
             </Link>
           </li>
           <li className={classes.liItem}>
-            <Link href="/Tables/4">
+            <Link href="/4">
               Users with car BMW/Mercedes/Audi and no digits in email
             </Link>
           </li>
