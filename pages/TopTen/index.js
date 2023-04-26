@@ -7,6 +7,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Link from "next/link";
+import classes from "../../src/styles/Home.module.css";
 export default function TopTen({ resJson }) {
   const topCities = resJson.topCities;
   const cityIncomes = resJson.cityIncomes;
@@ -20,7 +22,11 @@ export default function TopTen({ resJson }) {
     let temp = [];
     for (let index = 0; index < topCities.length; index++) {
       temp.push(
-        createData(index, topCities[index], cityIncomes[`${topCities[index]}`])
+        createData(
+          index + 1,
+          topCities[index],
+          cityIncomes[`${topCities[index]}`]?.toFixed(2)
+        )
       );
     }
     setRows(temp);
@@ -43,6 +49,11 @@ export default function TopTen({ resJson }) {
           <h3 style={{ textAlign: "center" }}>
             Having the highest number of users and their average income.
           </h3>
+          <p style={{ textAlign: "center" }}>
+            <Link className={classes.homeBtn} href="/">
+              Home
+            </Link>
+          </p>
         </div>
         <div>
           <TableContainer style={{ width: 500 }} component={Paper}>
@@ -50,8 +61,8 @@ export default function TopTen({ resJson }) {
               <TableHead>
                 <TableRow>
                   <TableCell>Rank</TableCell>
-                  <TableCell>City Name</TableCell>
-                  <TableCell align="right">Average Income</TableCell>
+                  <TableCell align="center">City Name</TableCell>
+                  <TableCell align="center">Average Income</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -63,8 +74,8 @@ export default function TopTen({ resJson }) {
                     <TableCell component="th" scope="row">
                       {row.rank}
                     </TableCell>
-                    <TableCell align="left">{row.city}</TableCell>
-                    <TableCell align="right">{row.income}</TableCell>
+                    <TableCell align="center">{row.city}</TableCell>
+                    <TableCell align="center">{row.income}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
